@@ -1,0 +1,11 @@
+<h1>Welcome</h1>
+
+<% if !admin_signed_in? %>
+<%= link_to 'Sign In', new_admin_session_path %>
+<% else %>
+<strong><%= current_admin.name %></strong><br><br> 
+Things to do:
+<li><%= link_to 'Courses', courses_path %></li>
+<% end %>
+
+

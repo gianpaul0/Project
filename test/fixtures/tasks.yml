@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id             :integer          not null, primary key
+#  type           :string(255)
+#  name           :string(255)
+#  due_date       :datetime
+#  expected_grade :integer
+#  actual_grade   :integer
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  name: MyString
+  due_date: 2014-07-15 15:43:52
+  expected_grade: 1
+  actual_grade: 1
+
+two:
+  type: 
+  name: MyString
+  due_date: 2014-07-15 15:43:52
+  expected_grade: 1
+  actual_grade: 1

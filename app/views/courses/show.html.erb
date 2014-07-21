@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @course.name %></h1><br>
+
+<table>
+  <tbody>
+    Students in this class:
+    <% @course.users.each do |student| %>
+    <tr>
+      <td><li><%= student.name %></td></li>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to 'Back', courses_path %>

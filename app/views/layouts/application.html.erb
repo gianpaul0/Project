@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<%= yield %>
+<div id="account_info">
+  <% if admin_signed_in? %><br>
+  <%= link_to "Sign out", destroy_admin_session_path, :method => 'delete' %>
+  <% end %>
+</div>
+
+  <% if !request.original_url.eql? root_url %><br>
+  <%= link_to "Home", root_path %>
+<% end %>
+  
+</body>
+</html>

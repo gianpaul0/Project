@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+
+<div>
+  <% @evaluate=true %>
+  <% current_admin.courses.each do |c| %>
+  <% if c.eql? @course %>
+  <% @evaluate=false %>
+  <% end %>
+  <% end %>
+
+
+
+  <% if @evaluate %>
+  The class <strong><%= @course.name %></strong>
+  was succesfully added to the user:
+  <strong><%= current_admin.name %></strong></br>
+  <% a=current_admin.courses << @course %>
+  <% a.save! %>
+			      
+  <% else %>
+  The class is already added
+  <% end %>
+</div>
+</br>
+
+
+<%= link_to 'Back', courses_path %>
