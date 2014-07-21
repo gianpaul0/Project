@@ -37994,3 +37994,624 @@ Started GET "/assets/work_blocks.js?body=1" for 10.0.2.2 at 2014-07-21 15:56:14 
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-07-21 15:56:14 +0000
+
+
+Started GET "/courses" for 10.0.2.2 at 2014-07-21 16:35:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CoursesController#index as HTML
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered courses/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 254ms (Views: 111.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/courses.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/owners.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/tasks.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/work_blocks.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/courses.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/owners.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/tasks.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/work_blocks.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-07-21 16:35:32 +0000
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:35:33 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  Rendered courses/remove.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <%= @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_70318916276540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:35:34 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  Rendered courses/remove.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <%= @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_52197640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:36:10 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAdmin Load (1.1ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  Rendered courses/remove.html.erb within layouts/application (66.0ms)
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (undefined local variable or method `c' for #<#<Class:0x0000000586dee0>:0x000000061bc820>):
+    1: <p id="notice"><%= notice %></p>
+    2: <%= c.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_51205660'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.7ms)
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:36:19 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  Rendered courses/remove.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <%= @c.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_49479300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.6ms)
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:36:32 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAdmin Load (1.3ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  Rendered courses/remove.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <%= @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_47994780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+
+
+Started GET "/courses/" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?  [["admin_id", 2]]
+  Rendered courses/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 101ms (Views: 80.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/tasks.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/courses.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/owners.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/work_blocks.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/courses.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/owners.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/tasks.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/work_blocks.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-07-21 16:37:49 +0000
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:38:42 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (2.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  Rendered courses/remove.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_21468260'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.5ms)
+
+
+Started GET "/courses/remove/4" for 10.0.2.2 at 2014-07-21 16:38:43 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  Rendered courses/remove.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_70318815622780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/courses/" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (1.3ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?  [["admin_id", 2]]
+  Rendered courses/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 106ms (Views: 86.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/owners.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/courses.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/tasks.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/work_blocks.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/courses.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/owners.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/tasks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/work_blocks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:19 +0000
+
+
+Started GET "/courses/new" for 10.0.2.2 at 2014-07-21 16:39:25 +0000
+Processing by CoursesController#new as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_form.html.erb (21.2ms)
+  Rendered courses/new.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 82ms (Views: 66.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses/add/5" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+Processing by CoursesController#add as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses"  WHERE "courses"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses_admins" ("admin_id", "course_id") VALUES (?, ?)[0m  [["admin_id", 2], ["course_id", 5]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  Rendered courses/add.html.erb within layouts/application (36.8ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (undefined method `save!' for #<Course::ActiveRecord_Associations_CollectionProxy:0x00000005da79b0>):
+    16:   was succesfully added to the user:
+    17:   <strong><%= current_admin.name %></strong></br>
+    18:   <% a=current_admin.courses << @course %>
+    19:   <% a.save! %>
+    20: 			      
+    21:   <% else %>
+    22:   The class is already added
+  app/views/courses/add.html.erb:19:in `_app_views_courses_add_html_erb__1632668924404277266_49149040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/courses/add/5" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+Processing by CoursesController#add as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses"  WHERE "courses"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered courses/add.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 30ms (Views: 23.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/owners.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/courses.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/tasks.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/work_blocks.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/courses.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/owners.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/tasks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/work_blocks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:30 +0000
+
+
+Started GET "/courses" for 10.0.2.2 at 2014-07-21 16:39:33 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mAdmin Load (0.7ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered courses/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 69ms (Views: 53.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/courses/new" for 10.0.2.2 at 2014-07-21 16:39:39 +0000
+Processing by CoursesController#new as HTML
+  [1m[35mAdmin Load (4.1ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCourse Load (1.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/_form.html.erb (13.8ms)
+  Rendered courses/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 56ms (Views: 34.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/courses/add/4" for 10.0.2.2 at 2014-07-21 16:39:40 +0000
+Processing by CoursesController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAdmin Load (5.7ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCourse Load (0.7ms)[0m  [1mSELECT  "courses".* FROM "courses"  WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?  [["admin_id", 2]]
+  Rendered courses/add.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 68ms (Views: 41.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/courses" for 10.0.2.2 at 2014-07-21 16:39:42 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.6ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?  [["admin_id", 2]]
+  Rendered courses/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 59ms (Views: 32.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/courses/new" for 10.0.2.2 at 2014-07-21 16:39:44 +0000
+Processing by CoursesController#new as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/_form.html.erb (10.9ms)
+  Rendered courses/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 53ms (Views: 41.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/courses/add/1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+Processing by CoursesController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (6.0ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.5ms)[0m  SELECT  "courses".* FROM "courses"  WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses_admins" ("admin_id", "course_id") VALUES (?, ?)[0m  [["admin_id", 2], ["course_id", 1]]
+  [1m[35m (23.6ms)[0m  commit transaction
+  Rendered courses/add.html.erb within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (undefined method `save!' for #<Course::ActiveRecord_Associations_CollectionProxy:0x007fe8b80ac7a8>):
+    16:   was succesfully added to the user:
+    17:   <strong><%= current_admin.name %></strong></br>
+    18:   <% a=current_admin.courses << @course %>
+    19:   <% a.save! %>
+    20: 			      
+    21:   <% else %>
+    22:   The class is already added
+  app/views/courses/add.html.erb:19:in `_app_views_courses_add_html_erb__1632668924404277266_49149040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.9ms)
+
+
+Started GET "/courses/add/1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+Processing by CoursesController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses"  WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered courses/add.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/courses.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/owners.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/work_blocks.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/tasks.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/courses.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/owners.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/tasks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/work_blocks.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-07-21 16:39:46 +0000
+
+
+Started GET "/courses" for 10.0.2.2 at 2014-07-21 16:39:47 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mAdmin Load (0.9ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCourse Load (0.7ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_admins" ON "courses"."id" = "courses_admins"."course_id" WHERE "courses_admins"."admin_id" = ?[0m  [["admin_id", 2]]
+  Rendered courses/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 68ms (Views: 40.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/remove/1" for 10.0.2.2 at 2014-07-21 16:39:57 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdmin Load (0.7ms)[0m  SELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1
+  Rendered courses/remove.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_21468260'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/courses/remove/1" for 10.0.2.2 at 2014-07-21 16:39:57 +0000
+Processing by CoursesController#remove as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins"  WHERE "admins"."id" = 2  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  Rendered courses/remove.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @course.name %>
+    3: <div>
+    4:   
+    5:   The Course was succesfully remove
+  app/views/courses/remove.html.erb:2:in `_app_views_courses_remove_html_erb___1847474778376884316_70318815622780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.7ms)
