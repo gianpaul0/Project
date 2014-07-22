@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721011537) do
+ActiveRecord::Schema.define(version: 20140722151409) do
 
   create_table "admins", force: true do |t|
     t.string   "name"
@@ -55,12 +55,6 @@ ActiveRecord::Schema.define(version: 20140721011537) do
 
   add_index "courses_admins", ["admin_id", "course_id"], name: "index_courses_admins_on_admin_id_and_course_id", unique: true
 
-  create_table "owners", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "tasks", force: true do |t|
     t.string   "type"
     t.string   "name"
@@ -69,6 +63,7 @@ ActiveRecord::Schema.define(version: 20140721011537) do
     t.integer  "actual_grade"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "course_id"
   end
 
   create_table "users", force: true do |t|
@@ -82,6 +77,7 @@ ActiveRecord::Schema.define(version: 20140721011537) do
     t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "task_id"
   end
 
 end

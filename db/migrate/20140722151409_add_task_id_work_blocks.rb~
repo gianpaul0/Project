@@ -1,0 +1,4 @@
+class AddTaskIdWorkBlocks < ActiveRecord::Migration
+  def change
+  end
+end

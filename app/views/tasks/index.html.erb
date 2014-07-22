@@ -3,11 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
+      <!-- <th>Type</th>
       <th>Name</th>
       <th>Due date</th>
       <th>Expected grade</th>
-      <th>Actual grade</th>
+      <th>Actual grade</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,12 +17,9 @@
       <tr>
         <td><%= task.type %></td>
         <td><%= task.name %></td>
-        <td><%= task.due_date %></td>
-        <td><%= task.expected_grade %></td>
-        <td><%= task.actual_grade %></td>
-        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Show', task_path(task.id) %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy',Task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

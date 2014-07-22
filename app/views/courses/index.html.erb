@@ -8,7 +8,7 @@
   </thead>
 
   <tbody>
-    <% @courses.each do |c| %>
+    <% current_admin.courses.each do |c| %>
       <tr>
 	<td><li><%= link_to c.name, c %></td></li>
         <td><%= link_to 'Remove', remove_course_path(c) %></td>

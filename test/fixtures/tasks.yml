@@ -10,6 +10,7 @@
 #  actual_grade   :integer
 #  created_at     :datetime
 #  updated_at     :datetime
+#  course_id      :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

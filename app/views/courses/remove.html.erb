@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
-<% @course.name %>
+
 <div>
-  
+  <% current_admin.courses.delete(Course.find(params[:id])) %>
   The Course was succesfully remove
 </div>
 

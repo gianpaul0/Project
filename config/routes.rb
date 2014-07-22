@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :owners
-
   devise_for :admins
   
   get 'courses/add/:id' => 'courses#add', :as => :add_course

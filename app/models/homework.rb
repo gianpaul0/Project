@@ -1,0 +1,2 @@
+class Homework < Task
+end 

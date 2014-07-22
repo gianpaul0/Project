@@ -10,6 +10,7 @@
 #  actual_grade   :integer
 #  created_at     :datetime
 #  updated_at     :datetime
+#  course_id      :integer
 #
 
 class Task < ActiveRecord::Base

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 a=Admin.create(:name => 'Gianpaulo', :email => 'g@h.com', :password => "12345678", :type => 'User')
 Admin.create(:name => 'Polo', :email => 'p@h.com', :password => "12345678", :type => 'User')
-Admin.create(:name => 'Admin', :email => 'a@h.com', :password => "12345678", :type => 'Owner')
+
 Course.create(:name => 'Java')
 Course.create(:name => 'Math')
 Course.create(:name => 'English')
