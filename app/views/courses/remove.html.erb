@@ -1,6 +1,6 @@
 
 <div>
-  <% current_admin.courses.delete(Course.find(params[:id])) %>
+  <% current_user.courses.delete(Course.find(params[:id])) %>
   The Course was succesfully remove
 </div>
 

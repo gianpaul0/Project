@@ -1,14 +1,47 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @course.name %></h1><br>
+<strong>Students in this class:</strong>
+<% @course.users.each do |student| %>
+  <tr>
+    <td><li><%= student.name %></td></li>
+  </tr>
+<% end %></br>
 
-<table>
-  <tbody>
-    Students in this class:
-    <% @course.users.each do |student| %>
-    <tr>
-      <td><li><%= student.name %></td></li>
-</tr>
+
+<strong>Task:</strong></br>
+<li><strong>Homework:</strong></li>
+<% @course.tasks.each do |task| %>
+  <% if task.type.eql? "Homework" %>
+&nbsp  &nbsp<%= link_to task.name, task_path(task.id) %> 
+<% g=Grade.where(:task_id => task.id, :user_id => current_user.id).first %>
+ (<%= g.nil? ? 0:g.actual_grade.to_i %>)
+(hours: <%= task.total_hours(current_user) %>)</br>
 <% end %>
-</tbody>
-</table>
-<%= link_to 'Back', courses_path %>
+<% end %></br>
+
+<li><strong>Project:</strong></li>
+<% @course.tasks.each do |task| %>
+  <% if task.type.eql? "Projec" %>
+&nbsp  &nbsp<%= link_to task.name, task_path(task.id) %> 
+<% g=Grade.where(:task_id => task.id, :user_id => current_user.id).first %>
+(<%= g.nil? ? 0:g.actual_grade.to_i %>) 
+(hours: <%= task.total_hours(current_user) %>)</br>
+<% end %>
+<% end %></br>
+
+<li><strong>Test:</strong></li>
+<% @course.tasks.each do |task| %>
+  <% if task.type.eql? "Test" %>
+&nbsp  &nbsp<%= link_to task.name, task_path(task.id) %>
+<% g=Grade.where(:task_id => task.id, :user_id => current_user.id).first %>
+(<%= g.nil? ? 0:g.actual_grade.to_i %>)
+(hours: <%= task.total_hours(current_user) %>)</br>
+<% end %>
+<% end %>
+
+</br></br></br>
+Total grade: <%= @course.total_grade(current_user) %></br>
+Total hours: <%= @course.total_hours(current_user) %></br>
+<strong>Best student:</strong> <%= @course.best_student %></br>
+<%= link_to 'Add Task', new_task_path(:course_id => @course.id) %></br>
+<%= link_to 'Back', courses_path %></br></br>

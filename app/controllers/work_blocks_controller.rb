@@ -25,10 +25,11 @@ class WorkBlocksController < ApplicationController
   # POST /work_blocks.json
   def create
     @work_block = WorkBlock.new(work_block_params)
-
+    @work_block.task_id = params[:task_id]
+    @work_block.user_id = params[:user_id]
     respond_to do |format|
       if @work_block.save
-        format.html { redirect_to @work_block, notice: 'Work block was successfully created.' }
+        format.html { redirect_to task_path(@work_block.task_id), notice: 'Work block was successfully created.' }
         format.json { render :show, status: :created, location: @work_block }
       else
         format.html { render :new }

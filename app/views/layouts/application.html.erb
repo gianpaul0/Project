@@ -13,12 +13,12 @@
   <p class="alert"><%= alert %></p>
 <%= yield %>
 <div id="account_info">
-  <% if admin_signed_in? %><br>
-  <%= link_to "Sign out", destroy_admin_session_path, :method => 'delete' %>
+  <% if user_signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
   <% end %>
 </div>
 
-  <% if !request.original_url.eql? root_url %><br>
+  <% if !request.original_url.eql? root_url %>
   <%= link_to "Home", root_path %>
 <% end %>
   

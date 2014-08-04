@@ -1,4 +1,0 @@
-class AdminsTasks < ActiveRecord::Migration
-  def change
-  end
-end

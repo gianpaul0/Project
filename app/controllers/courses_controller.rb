@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.courses_for_admin(current_admin)
+    @courses = Course.courses_for_user(current_user)
   end
 
   # GET /courses/1
@@ -33,7 +33,7 @@ class CoursesController < ApplicationController
   def create
     
     @course = Course.new(course_params)
-    @courses.admins << Admin.find(params[:admin_id]) unless params[:admin_id].blank?
+    @courses.users << User.find(params[:user_id]) unless params[:user_id].blank?
     respond_to do |format|
       if @course.save
         format.html { redirect_to @course, notice: 'Course was successfully created.' }

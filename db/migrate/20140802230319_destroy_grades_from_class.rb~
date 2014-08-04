@@ -1,0 +1,4 @@
+class DestroyGradesFromClass < ActiveRecord::Migration
+  def change
+  end
+end

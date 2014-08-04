@@ -7,13 +7,13 @@ class ApplicationController < ActionController::Base
   def evaluate_sign_in
     
     
-    if ((!request.original_url.eql?(root_url) and !request.original_url.eql? (root_url+"admins/sign_in"))and !admin_signed_in? )
-      redirect_to root_url+"admins/sign_in"
+    if ((!request.original_url.eql?(root_url) and !request.original_url.eql? (root_url+"users/sign_in"))and !user_signed_in? )
+      redirect_to root_url+"users/sign_in"
     end
   end
   
   
-  def after_sign_in_path_for(admin)
+  def after_sign_in_path_for(user)
     
     root_url
       

@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @task.type %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @task.name %>
 </p>
@@ -15,15 +10,32 @@
   <%= @task.due_date %>
 </p>
 
-<p>
-  <strong>Expected grade:</strong>
-  <%= @task.expected_grade %>
-</p>
 
 <p>
-  <strong>Actual grade:</strong>
-  <%= @task.actual_grade %>
+  <strong>Grade:</strong>
+  <% @task.grades.where(:user_id => current_user.id).each do |grades| %>
+   <%= grades.actual_grade.to_i %>
+  <% end %>
+
+
+  <% if Grade.where(:task_id => @task.id, :user_id => current_user.id).first.nil? %>
+   </br> <%= link_to 'Add grade', new_grade_path(:task_id => @task.id,:user_id => current_user.id) %>
+  <% else %>
+   </br><%= link_to 'Change grade', edit_grade_path(Grade.where(:task_id => @task.id, :user_id => current_user.id).first.id) %>
+<% end %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+
+
+<strong>Work Blocks:</strong>
+<% @task.work_blocks.each do |wb| %>
+  <% if wb.user_id.eql? current_user.id %>
+   <li>total hours: <%= wb.total_hours %> | start time: <%= wb.start_time %> -  end time:<%= wb.end_time %></li>
+<% end %>
+<% end %>
+
+</br>
+<%= link_to 'Add Block', new_work_block_path(:task_id => @task.id,:user_id => current_user.id) %>
+</br></br></br>
+<%= link_to 'Edit', edit_task_path(@task.id) %> |
+<%= link_to 'Back', course_path(@task.course_id) %>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  resources :students
+
+  devise_for :users
+  resources :grades
   
   get 'courses/add/:id' => 'courses#add', :as => :add_course
   
@@ -11,7 +14,11 @@ Rails.application.routes.draw do
 
   resources :tasks
 
-  resources :users
+  resources :homework
+
+  resources :projec
+  
+  resources :test
 
   root 'welcome#index'
   

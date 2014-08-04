@@ -1,0 +1,2 @@
+class Projec < Task
+end 

@@ -19,6 +19,11 @@
     <%= f.label :end_time %><br>
     <%= f.datetime_select :end_time %>
   </div>
+
+  <div>
+    <%= hidden_field_tag :task_id, params[:task_id] %>
+    <%= hidden_field_tag :user_id, params[:user_id] %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

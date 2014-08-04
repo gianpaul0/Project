@@ -8,10 +8,10 @@
   </thead>
 
   <tbody>
-    <% current_admin.courses.each do |c| %>
+    <% current_user.courses.each do |c| %>
       <tr>
-	<td><li><%= link_to c.name, c %></td></li>
-        <td><%= link_to 'Remove', remove_course_path(c) %></td>
+	<td><li><%= link_to c.name, c %> (<%= c.total_grade(current_user) %>)</td></li>
+        <td><%= link_to 'Drop', remove_course_path(c) %></td>
         <!-- <td><%= link_to 'Show', c %></td>
         <td><%= link_to 'Edit', edit_course_path(c) %></td>
         <td><%= link_to 'Destroy', c, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
@@ -22,4 +22,4 @@
 
 <br>
 
-<strong><%= link_to 'Add Course', new_course_path %></strong>
+<strong><%= link_to 'Add Course', new_course_path %></strong></br></br>

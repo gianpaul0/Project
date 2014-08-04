@@ -7,6 +7,7 @@
 #  end_time   :datetime
 #  created_at :datetime
 #  updated_at :datetime
+#  task_id    :integer
 #
 
 require 'test_helper'
